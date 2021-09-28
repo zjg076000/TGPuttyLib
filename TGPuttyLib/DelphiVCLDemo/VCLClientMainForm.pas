@@ -8,6 +8,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.FileCtrl, Vcl.Grids,
   DateUtils,IOUtils,Registry,
+<<<<<<< HEAD
   tgputtylib,tgputtysftp, Vcl.ComCtrls, Vcl.ExtCtrls, Vcl.Buttons;
 
 type
@@ -43,17 +44,56 @@ type
     GroupBox3: TGroupBox;
     btUpload: TButton;
     btDownload: TButton;
+=======
+  tgputtylib,tgputtysftp, Vcl.ComCtrls;
+
+type
+  TVCLSFTPClientDemoForm = class(TForm)
+    DirectoryListBox1: TDirectoryListBox;
+    DriveComboBox1: TDriveComboBox;
+    FileListBox1: TFileListBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    edURL: TEdit;
+    Label3: TLabel;
+    edPort: TEdit;
+    Label4: TLabel;
+    edUserName: TEdit;
+    Label5: TLabel;
+    edPassword: TEdit;
+    Label6: TLabel;
+    edFolderPath: TEdit;
+    Label7: TLabel;
+    sgRemoteFiles: TStringGrid;
+    Label8: TLabel;
+    btConnect: TButton;
+    btDisconnect: TButton;
+    Label9: TLabel;
+    cbVerbose: TCheckBox;
+    memLog: TMemo;
+    btUpload: TButton;
+    btDownload: TButton;
+    cbSavePassword: TCheckBox;
+    ProgressBar1: TProgressBar;
+>>>>>>> 4ae6a2f7e8c1183cdf6c26067a235ac233faf571
     btDeleteLocal: TButton;
     btDeleteRemote: TButton;
     btMkDir: TButton;
     btRemoveDir: TButton;
     btMove: TButton;
+<<<<<<< HEAD
     Panel4: TPanel;
     Label7: TLabel;
     edFolderPath: TEdit;
     Panel5: TPanel;
     ProgressBar1: TProgressBar;
     SpeedButton1: TSpeedButton;
+=======
+    FileOpenDialog1: TFileOpenDialog;
+    edKeyFile: TEdit;
+    Label10: TLabel;
+    btnSelectKeyFile: TButton;
+>>>>>>> 4ae6a2f7e8c1183cdf6c26067a235ac233faf571
     procedure btConnectClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -76,7 +116,10 @@ type
     procedure btMoveClick(Sender: TObject);
     procedure btnSelectKeyFileClick(Sender: TObject);
     procedure cbVerboseClick(Sender: TObject);
+<<<<<<< HEAD
     procedure SpeedButton1Click(Sender: TObject);
+=======
+>>>>>>> 4ae6a2f7e8c1183cdf6c26067a235ac233faf571
   private
     { Private declarations }
     PSFTP:TTGPuttySFTP;
@@ -445,6 +488,7 @@ begin
      end;
   end;
 
+<<<<<<< HEAD
 procedure TVCLSFTPClientDemoForm.SpeedButton1Click(Sender: TObject);
 begin
   // 1. 在备份目录中 创建一个目录 定义为当天的日期
@@ -455,6 +499,8 @@ begin
 
 end;
 
+=======
+>>>>>>> 4ae6a2f7e8c1183cdf6c26067a235ac233faf571
 function TVCLSFTPClientDemoForm.VerifyHostKeyCallback(const host: PAnsiChar; const port: Integer;
                                                       const fingerprint: PAnsiChar;
                                                       const verificationstatus:Integer;
